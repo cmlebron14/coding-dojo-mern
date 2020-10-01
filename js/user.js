@@ -5,16 +5,20 @@ class User {
   }
   makeDeposit(amt) {
     this.balance += amt;
+    return this;
   }
   makeWithdrawal(amt) {
     this.balance -= amt;
+    return this;
   }
   displayBalance() {
     console.log(`User: ${this.name}, Balance: ${this.balance}`);
+    return this;
   }
   transferBalance(otherUser, amt) {
     this.balance -= amt;
     otherUser.balance += amt;
+    return this;
   }
 }
 
@@ -22,24 +26,11 @@ const katrina = new User("Katrina");
 const zen = new User("Zen");
 const ryan = new User("Ryan");
 
-katrina.makeDeposit(200);
-katrina.makeDeposit(100);
-katrina.makeDeposit(50);
-katrina.makeWithdrawal(100);
-katrina.displayBalance();
+katrina.makeDeposit(200).makeDeposit(100).makeDeposit(50).makeWithdrawal(100).displayBalance();
 
-zen.makeDeposit(150);
-zen.makeDeposit(100);
-zen.makeWithdrawal(25);
-zen.makeWithdrawal(25);
-zen.displayBalance();
+zen.makeDeposit(150).makeDeposit(100).makeWithdrawal(25).makeWithdrawal(25).displayBalance();
 
-ryan.makeDeposit(400);
-ryan.makeWithdrawal(75);
-ryan.makeWithdrawal(75);
-ryan.makeWithdrawal(100);
-ryan.displayBalance();
+ryan.makeDeposit(400).makeWithdrawal(75).makeWithdrawal(75).makeWithdrawal(100).displayBalance();
 
-katrina.transferBalance(ryan, 50);
-katrina.displayBalance();
+katrina.transferBalance(ryan, 50).displayBalance();
 ryan.displayBalance();
