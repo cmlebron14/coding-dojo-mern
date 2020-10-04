@@ -26,8 +26,37 @@ class BankAccount {
   }
 }
 
-const account1712 = new BankAccount(0, 0.01);
-const account1692 = new BankAccount(50, 0.01);
+class User {
+  constructor(name) {
+    this.name = name;
+    this.account = new BankAccount(0, 0.02);
+  }
+  makeDeposit(amt) {
+    this.account.deposit(amt);
+    return this;
+  }
+  makeWithdrawal(amt) {
+    this.account.withdraw(amt);
+    return this;
+  }
+  displayBalance() {
+    console.log(`User: ${this.name}, Balance: ${this.account.balance}`);
+    return this;
+  }
+  transferBalance(otherUser, amt) {
+    this.account.withdraw(amt);
+    otherUser.account.deposit(amt);
+    return this;
+  }
+}
 
-account1712.deposit(50).deposit(100).deposit(300).withdraw(250).yieldInterest().displayAccountInfo();
-account1692.deposit(300).deposit(150).withdraw(50).withdraw(50).withdraw(50).withdraw(50).yieldInterest().displayAccountInfo();
+const christina = new User("Christina");
+const katrina = new User("Katrina");
+
+christina.makeDeposit(150);
+katrina.makeDeposit(50);
+christina.displayBalance;
+katrina.displayBalance;
+christina.transferBalance(katrina, 50);
+christina.displayBalance;
+katrina.displayBalance;
