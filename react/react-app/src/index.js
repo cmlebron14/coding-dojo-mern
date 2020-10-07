@@ -1,14 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import PersonCard from "./PersonCard";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PersonCard personName="Doe, Jane" personAge={45} personHair="Brown" />
+    <PersonCard personName="Smith, John" personAge={88} personHair="Brown" />
+    <PersonCard personName="Fillmore, Millard" personAge={50} personHair="Brown" />
+    <PersonCard personName="Smith, Maria" personAge={62} personHair="Brown" />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
