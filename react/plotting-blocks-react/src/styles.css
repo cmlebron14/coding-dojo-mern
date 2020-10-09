@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background: #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1%;
+  width: 100%;
+}
+
+.header {
+  background: #6aa84f;
+  height: 100px;
+  margin: 2% 1%;
+  width: 100%;
+}
+
+.navigation {
+  background: #6fa8dc;
+  margin: 0 1%;
+  width: 23%;
+}
+
+.main {
+  background: #e06666;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1%;
+  padding: 0 1%;
+  width: 73%;
+}
+
+.subcontent {
+  background: #ffd966;
+  height: 300px;
+  margin: 2% 1% 1%;
+  width: 31.33%;
+}
+
+.advertisement {
+  background: #b4a7d6;
+  height: 100px;
+  margin: 1% 1% 2%;
+  width: 100%;
+}
