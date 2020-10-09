@@ -1,0 +1,29 @@
+.person-card {
+  background: lightblue;
+  font-family: sans-serif;
+  margin: 1%;
+  padding: 20px;
+  width: 23%;
+}
+
+.person-card h2 {
+  margin-bottom: 10px;
+}
+
+.person-card p {
+  margin-bottom: 5px;
+}
+
+.person-card button {
+  background: #009688;
+  border: none;
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 8px 15px;
+}
+
+.person-card button:hover {
+  background: #017369;
+}
