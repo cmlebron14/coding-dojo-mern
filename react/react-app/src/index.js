@@ -1,15 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import PersonCard from "./PersonCard";
+// import PersonCard from "./PersonCard";
+import PersonCardFunctional from "./PersonCardFunctional";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <PersonCard personName="Doe, Jane" personAge={45} personHair="Brown" />
-    <PersonCard personName="Smith, John" personAge={88} personHair="Brown" />
-    <PersonCard personName="Fillmore, Millard" personAge={50} personHair="Brown" />
-    <PersonCard personName="Smith, Maria" personAge={62} personHair="Brown" />
+    {/* <PersonCard personName="Doe, Jane" personAge={45} personHair="Brown" /> */}
+    {/* <PersonCard personName="Smith, John" personAge={88} personHair="Brown" /> */}
+    {/* <PersonCard personName="Fillmore, Millard" personAge={50} personHair="Brown" /> */}
+    {/* <PersonCard personName="Smith, Maria" personAge={62} personHair="Brown" /> */}
+
+    <PersonCardFunctional personFirstName="Jane" personLastName="Doe" personAge={45} personHair="Black" />
+    <PersonCardFunctional personFirstName="John" personLastName="Smith" personAge={88} personHair="Brown" />
+    <PersonCardFunctional personFirstName="Millard" personLastName="Fillmore" personAge={50} personHair="Brown" />
+    <PersonCardFunctional personFirstName="Maria" personLastName="Smith" personAge={62} personHair="Brown" />
   </React.StrictMode>,
   document.getElementById("root")
 );
