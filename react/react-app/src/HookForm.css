@@ -1,0 +1,39 @@
+.wrapper {
+  font-family: "Helvetica", sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  width: 600px;
+}
+
+form {
+  border: solid 2px #333;
+}
+
+.form-group {
+  padding: 10px;
+}
+
+.form-group:nth-child(odd) {
+  background: lightgray;
+}
+
+.form-group label {
+  display: inline-block;
+  width: 40%;
+}
+
+.form-group input {
+  padding: 3px 5px;
+  width: 60%;
+}
+
+.form-output {
+  background: lightgoldenrodyellow;
+  border: solid 2px #333;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.form-output p {
+  margin-bottom: 10px;
+}
