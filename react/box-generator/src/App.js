@@ -1,14 +1,20 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import BoxGeneratorForm from './BoxGeneratorForm';
-import BoxGeneratorDisplay from './BoxGeneratorDisplay';
+import BoxForm from './BoxGeneratorForm';
+import BoxDisplay from './BoxGeneratorDisplay';
 
-const App = props => {
+const App = () => {
+  const [ currentBoxes, setCurrentBoxes] = useState([]);
+
+  const addNewBox = (newBox) => {
+    setCurrentBoxes([...currentBoxes, newBox]);
+  }
+
   return (
-    <Fragment>
-      <BoxGeneratorForm />
-      <BoxGeneratorDisplay />
-    </Fragment>
+    <>
+      <BoxForm onNewBox={ addNewBox }/>
+      <BoxDisplay boxes={ currentBoxes } />
+    </>
   );
 }
 
