@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.app {
+  padding: 30px 40px;
+}
+
+.tab {
+  border: solid 1px #e5e5e5;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  margin-right: 10px;
+  padding: 10px 40px;
+}
+
+.tab:hover {
+  box-shadow: rgba(32, 33, 36, 0.28) 0px 1px 6px 0px;
+}
+
+.tab.active {
+  background: black;
+  color: white;
+}
+
+.content {
+  border: solid 1px #e5e5e5;
+  font-size: 21px;
+  margin-top: 20px;
+  max-width: 650px;
+  min-height: 250px;
+  padding: 20px;
+}
