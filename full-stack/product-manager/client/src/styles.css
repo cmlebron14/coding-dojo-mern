@@ -4,9 +4,16 @@
 	padding: 0;
 }
 
+.product-manager-app {
+	padding: 20px 30px;
+}
+
+.product-manager-app h1 {
+	margin-bottom: 24px;
+}
+
 .create-form {
 	max-width: 450px;
-	padding: 20px 30px;
 }
 
 .create-form .form-group {
@@ -17,4 +24,18 @@
 
 .create-form button {
 	width: 100%;
+}
+
+.list-all-section {
+	border-top: solid 1px #000;
+	margin-top: 40px;
+}
+
+.list-all-section h2 {
+	margin-bottom: 20px;
+	margin-top: 35px;
+}
+
+.list-all-section li {
+	list-style-position: inside;
 }
