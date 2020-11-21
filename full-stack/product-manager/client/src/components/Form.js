@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Form = props => {
   const { initialTitle, initialPrice, initialDescription } = props;
-  const [title, setTitle] = useState(initialTitle);
-  const [price, setPrice] = useState(initialPrice);
-  const [description, setDescription] = useState(initialDescription);
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+
+  useEffect(() => {
+    setTitle(initialTitle);
+    setPrice(initialPrice);
+    setDescription(initialDescription);
+  }, [initialTitle, initialPrice, initialDescription])
 
   const handleSubmit = e => {
     e.preventDefault();
