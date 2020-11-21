@@ -1,5 +1,6 @@
 import Main from './views/Main';
 import ProductDetails from './views/ProductDetails';
+import EditProduct from './views/EditProduct';
 import { Router } from "@reach/router";
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <Router>
         <Main path="/" />
         <ProductDetails path="/product-details/:product_id" />
+        <EditProduct path="/edit-product/:id"/>
       </Router>
     </div>
   );
