@@ -9,7 +9,7 @@ const ProductDetails = props => {
     axios.get(`http://localhost:8000/api/products/${props.product_id}`)
       .then(res => setProduct(res.data))
       .catch(err => console.log(err));
-  }, []);
+  }, [props.product_id]);
 
   const deleteProduct = () => {
     axios.delete(`http://localhost:8000/api/products/${props.product_id}`)
@@ -21,7 +21,6 @@ const ProductDetails = props => {
       <h3>{ product.title }</h3>
       <p>Price: {product.price}</p>
       <p>Description: {product.description}</p>
-      <p>Product Id: {product._id}</p>
       <Link to={"/edit-product/" + product._id} className="button edit">Edit Product</Link>
       <button className="delete" onClick={ deleteProduct }>Delete Product</button>
     </div>

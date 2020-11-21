@@ -10,7 +10,7 @@ const App = () => {
       <Router>
         <Main path="/" />
         <ProductDetails path="/product-details/:product_id" />
-        <EditProduct path="/edit-product/:id"/>
+        <EditProduct path="/edit-product/:product_id"/>
       </Router>
     </div>
   );
