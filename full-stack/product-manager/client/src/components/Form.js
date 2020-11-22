@@ -34,7 +34,7 @@ const Form = props => {
         <label htmlFor="description">Description</label>
         <input type="text" name="description" value={description} onChange={e => { setDescription(e.target.value) }} />
       </div>
-      <button type="submit">Save Product Details</button>
+      <button type="submit">Submit</button>
     </form>
   );
 }

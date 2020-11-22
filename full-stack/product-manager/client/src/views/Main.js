@@ -12,6 +12,7 @@ const Main = () => {
       .catch(err => console.log(err));
   }, []);
 
+  //to refresh DOM when deleting a product
   const removeFromDom = productID => {
     setProducts(products.filter(product => product._id !== productID));
   }

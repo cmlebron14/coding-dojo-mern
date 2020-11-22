@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteButton from "./DeleteButton";
 import axios from "axios";
 import { Link } from "@reach/router";
 
@@ -16,7 +17,7 @@ const ListAll = props => {
       {props.products.map((product, i) => (
         <li key={i}>
           <Link to={`/product-details/${product._id}`}>{ product.title }</Link>
-          <button className="delete" onClick={ e => deleteProduct(product._id)}>Delete Product</button>
+          <DeleteButton product_id={product._id} deleteProduct={deleteProduct} />
         </li>
       ))}
       </ul>

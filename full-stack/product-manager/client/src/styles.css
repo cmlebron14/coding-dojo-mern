@@ -52,7 +52,7 @@ button.delete:hover,
 	margin-bottom: 24px;
 }
 
-.create-form {
+form {
 	max-width: 450px;
 }
 
